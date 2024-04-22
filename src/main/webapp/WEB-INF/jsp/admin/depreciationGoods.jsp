@@ -63,7 +63,7 @@
 </head>
 <body>
 <h1>折旧商品填报</h1>
-<form action="/zy_ssm_war/addDepreciationGoods" method="POST">
+<form action="/zy_ssm/addDepreciationGoods" method="POST">
     <label for="name">商品名称：</label>
     <input type="text" id="name" name="name" required>
 
@@ -81,7 +81,7 @@
     <!-- 新增：按钮间距 -->
     <div class="button-spacer"></div>
 
-    <button type="button" onclick="window.location.href='/zy_ssm_war/admin_goods_list'">取消</button>
+    <button type="button" onclick="window.location.href='/zy_ssm/admin_goods_list'">取消</button>
 </form>
 </body>
 </html>

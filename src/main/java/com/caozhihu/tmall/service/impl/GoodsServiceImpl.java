@@ -6,6 +6,7 @@ import com.caozhihu.tmall.service.GoodsService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.math.BigDecimal;
 import java.time.LocalDateTime;
 import java.util.List;
 
@@ -20,9 +21,9 @@ public class GoodsServiceImpl implements GoodsService {
     }
 
     @Override
-    public List<Goods> search(String name, String price, String type) {
+    public List<Goods> search(String name, BigDecimal price, String type) {
         if (name == null || name.isEmpty()) {
-            if (price == null || price.isEmpty()) {
+            if (price.intValue()==0  ) {
                 if (type == null || type.isEmpty()) {
 
                     return goodsMapper.list();
@@ -39,7 +40,7 @@ public class GoodsServiceImpl implements GoodsService {
             }
         } else {
 
-            if (price == null || price.isEmpty()) {
+            if (price.intValue()==0 ) {
                 if (type == null || type.isEmpty()) {
 
                     return goodsMapper.searchByName(name);
@@ -51,7 +52,7 @@ public class GoodsServiceImpl implements GoodsService {
 
                 return goodsMapper.searchByNameAndPrice(name, price);
             } else {
-
+                System.out.printf("name"+name+"price"+price+"type"+type);
                 return goodsMapper.searchByNameAndPriceAndType(name, price, type);
             }
         }

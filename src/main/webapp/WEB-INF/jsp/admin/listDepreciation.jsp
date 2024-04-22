@@ -53,9 +53,9 @@
   <thead>
   <tr>
     <th>ID</th>
-    <th>Name</th>
-    <th>Price</th>
-    <th>Time</th>
+    <th>商品名称</th>
+    <th>折旧后价格</th>
+    <th>折旧时间</th>
   </tr>
   </thead>
   <tbody>
@@ -73,6 +73,6 @@
 </html>
 <script>
  function cz(){
-   window.location.href="/zy_ssm_war/admin_goods_list";
+   window.location.href="/zy_ssm/admin_goods_list";
  }
 </script>

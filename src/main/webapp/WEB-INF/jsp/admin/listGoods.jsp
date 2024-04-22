@@ -101,19 +101,19 @@
 <!-- 脚本区域 -->
 <script>
   function addzj() {
-    window.location.href = "/zy_ssm_war/depreciationGoods";
+    window.location.href = "/zy_ssm/depreciationGoods";
   }
 
   function addsh() {
-    window.location.href = "/zy_ssm_war/damageGoods";
+    window.location.href = "/zy_ssm/damageGoods";
   }
 
   function add() {
-    window.location.href = "/zy_ssm_war/add_goods";
+    window.location.href = "/zy_ssm/add_goods";
   }
 
   function cz() {
-    window.location.href = "/zy_ssm_war/admin_goods_list";
+    window.location.href = "/zy_ssm/admin_goods_list";
   }
 
   function performSearch() {
@@ -142,9 +142,9 @@
     }
 
     if (!urlParams == "") {
-      window.location.href = "/zy_ssm_war/admin_goods_list?" + urlParams;
+      window.location.href = "/zy_ssm/admin_goods_list?" + urlParams;
     } else {
-      window.location.href = "/zy_ssm_war/admin_goods_list";
+      window.location.href = "/zy_ssm/admin_goods_list";
     }
   }
 </script>

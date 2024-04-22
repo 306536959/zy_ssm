@@ -8,6 +8,7 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 import javax.servlet.http.HttpServletRequest;
+import java.math.BigDecimal;
 import java.util.List;
 
 @Controller
@@ -19,7 +20,7 @@ public class GoodsController {
     @RequestMapping("admin_goods_list")
     public String list(HttpServletRequest request, Model model) {
         String name = request.getParameter("name");
-        String price =request.getParameter("price");
+        BigDecimal price =BigDecimal.valueOf(Integer.valueOf(request.getParameter("price"))) ;
         String type = request.getParameter("type");
         System.out.printf("name"+ name+"price"+price+"type"+type);
         List<Goods> list;
